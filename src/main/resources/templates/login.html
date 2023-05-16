@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+<!--
+Practice coding based on this:
+https://dribbble.com/shots/1493728-Simple-Login-Page
+-->
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Bree+Serif:300,400" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+
+<h1>login </h1><br>
+
+<div id="container">
+  <form action="/login" method="post"  th:object="${requestLogin}">
+    <input type="text" name="email" class="email-area" placeholder="Email">
+
+    <input type="password" name="password" placeholder="Password">
+
+    <input type="submit" value="Login" class="btn-login">
+    <a href="/signUp">don't have an account</a>
+  </form>
+</div>
+</body>
+</html>

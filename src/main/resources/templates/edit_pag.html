@@ -1,0 +1,92 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reg.css">
+
+    <title>Admin</title>
+</head>
+<body>
+<div class="container">
+    <div class="row main">
+        <div class="panel-heading">
+            <div class="panel-title text-center">
+                <h1 class="title">Edit your appointment</h1>
+                <hr />
+            </div>
+        </div>
+        <div class="main-login main-center">
+            <form class="form-horizontal" method="post" th:action="@{/registerAppointment}" th:object="${appointment}">
+
+                <div class="form-group">
+                    <label for="id" class="cols-sm-2 control-label">Your Name</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="hidden" class="form-control" th:field="*{id}" name="id" id="fullNam"  placeholder="Enter your Names"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Your Name</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" th:field="*{fullName}" name="fullName" id="fullName"  placeholder="Enter your Names"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control"  th:field="*{email}" name="email" id="email"  placeholder="Enter your Email"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Phone number</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="number" class="form-control" th:field="*{phoneNumber}" name="phoneNumber" id="username"  placeholder="Enter your phone number"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">budget</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="number" class="form-control" th:field="*{budget}" name="budget" id="usernam"  placeholder="Enter your budget"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Wedding Guest</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="number" class="form-control" th:field="*{guest}" name="guest" id="userna"  placeholder="Enter your wedding Guest"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+
+                    <input type="submit" value="Edit" class="btn-login">
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
